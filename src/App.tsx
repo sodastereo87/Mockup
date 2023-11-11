@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './App.css';
 import DropDown from './components/dropdown';
+import Question from './components/checkbox';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           </Col>
           <Col>
             <div>
-              <DropDown />
+            <Question question="Split schedule using social distancing?" />
             </div>
           </Col>
         </Row>
@@ -31,12 +32,13 @@ function App() {
         <Row>
           <Col>
             <div>
-              <DropDown />
+           
             </div>
           </Col>
           <Col>
             <div>
-              <DropDown />
+             <p>Location Checking:</p>
+             <p>All Available!</p>
             </div>
           </Col>
         </Row>
