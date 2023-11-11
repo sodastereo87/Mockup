@@ -1,14 +1,18 @@
 import React from 'react';
 import './App.css';
+import DropDown from './components/dropdown'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+        <p style={{ fontWeight: 'bold',textDecoration: 'underline' }}>
+         Document Upload
         </p>
       </header>
+      <div>
+        <DropDown />
+      </div>
     </div>
   );
 }
