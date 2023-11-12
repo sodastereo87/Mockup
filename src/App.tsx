@@ -13,7 +13,7 @@ function App() {
     <Container>
       <div className="App">
         <header className="App-header">
-          <p style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
+          <p className='title'>
             Document Upload
           </p>
         </header>
