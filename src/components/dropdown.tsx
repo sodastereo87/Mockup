@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function DropDown() {
   return (
     <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
+      <Dropdown.Toggle variant="" id="dropdown-basic">
       Select Import Name
       </Dropdown.Toggle>
 

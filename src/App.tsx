@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import './App.css';
 import DropDown from './components/dropdown';
 import Question from './components/checkbox';
+import FileDrop from './components/draganddrop';
 
 function App() {
   return (
@@ -17,29 +18,42 @@ function App() {
         </header>
 
         <Row>
+          {/* First column */}
           <Col>
-            <div>
-              <DropDown />
-            </div>
-          </Col>
-          <Col>
-            <div>
-            <Question question="Split schedule using social distancing?" />
-            </div>
-          </Col>
-        </Row>
+            <Row>
+              <Col>
+                <div>
+                  <DropDown />
+                </div>
+              </Col>
+            </Row>
 
-        <Row>
-          <Col>
-            <div>
-           
-            </div>
+            <Row>
+              <Col>
+                <div>
+                 <FileDrop />
+                </div>
+              </Col>
+            </Row>
           </Col>
+
+          {/* Second column */}
           <Col>
-            <div>
-             <p>Location Checking:</p>
-             <p>All Available!</p>
-            </div>
+            <Row>
+              <div>
+                <Question question="Split schedule using social distancing?" />
+              </div>
+            </Row>
+
+            <Row>
+              <Col>
+                <div>
+                  <p>Location Checking:</p>
+                  <p>All Available!</p>
+                </div>
+              </Col>
+            </Row>
+            
           </Col>
         </Row>
       </div>

@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+/* title */
 .App-header {
   background-color: white;
   display: flex;
@@ -10,4 +11,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: darkblue;
+  margin-top: 5%;
 }
+
+/* dropdown name */
