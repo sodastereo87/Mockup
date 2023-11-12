@@ -6,6 +6,7 @@ import './App.css';
 import DropDown from './components/dropdown';
 import Question from './components/checkbox';
 import FileDrop from './components/draganddrop';
+import Switch from './components/switch';
 
 function App() {
   return (
@@ -35,6 +36,25 @@ function App() {
                 </div>
               </Col>
             </Row>
+
+            <Row>
+              <Col>
+                <div>
+                  <p>Elapse Data Checking:</p>
+                  <p>No Elapsed Dates!</p>
+                </div>
+              </Col>
+            </Row>
+
+            <Row>
+              <Col>
+                <div>
+                  <p>Tolerance Window:</p>
+                  <Switch />
+                </div>
+              </Col>
+            </Row>
+
           </Col>
 
           {/* Second column */}
@@ -53,7 +73,7 @@ function App() {
                 </div>
               </Col>
             </Row>
-            
+
           </Col>
         </Row>
       </div>
