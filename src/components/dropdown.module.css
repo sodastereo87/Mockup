@@ -1,0 +1,15 @@
+      /* dropdowm menu */
+      .menu {
+          text-align: left;
+          width: 100%;
+          border-style: ridge;
+          border-radius: 7px;
+      }
+
+      /* dropdowm menu options */
+      .menu2 {
+          width: 100%;
+          text-align: left;
+      }
+
+      .dropdown-toggle::after {}
