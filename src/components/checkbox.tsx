@@ -7,7 +7,7 @@ interface QuestionProps {
 }
 
 const Question: React.FC<QuestionProps> = ({ question }) => {
-  const [isCheckedYes, setCheckedYes] = useState(false);
+  const [isCheckedYes, setCheckedYes] = useState(true);
   const [isCheckedNo, setCheckedNo] = useState(false);
 
   const handleCheckboxChange = (option: 'yes' | 'no') => {
@@ -29,15 +29,15 @@ const Question: React.FC<QuestionProps> = ({ question }) => {
           checked={isCheckedYes}
           onChange={() => handleCheckboxChange('yes')}
         />
-        Yes
+        &nbsp;Yes
       </label>
-      <label>
+      <label className={checkCSS.lab}>
         <input
           type="radio"
           checked={isCheckedNo}
           onChange={() => handleCheckboxChange('no')}
         />
-        No
+        &nbsp;No
       </label>
     </div>
   );

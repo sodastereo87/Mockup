@@ -8,15 +8,14 @@ import Question from './components/checkbox';
 import FileDrop from './components/draganddrop';
 import Switch from './components/switch';
 import Paragraph from './components/location';
+import Client from './components/client';
 
 function App() {
   return (
     <Container>
       <div className="App">
         <header className="App-header">
-          <p className='title'>
-            Document Upload
-          </p>
+          <p className='title'>Document Upload</p>
         </header>
 
         <Row>
@@ -34,7 +33,7 @@ function App() {
             <Row>
               <Col>
                 <div>
-                 <FileDrop />
+                  <FileDrop />
                 </div>
                 <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div>
               </Col>
@@ -44,7 +43,7 @@ function App() {
               <Col>
                 <div>
                   <Paragraph content="Elapse Data Checking:" />
-                  <div  style={{color:'mediumseagreen'}}>
+                  <div style={{color:'mediumseagreen'}}>
                     <Paragraph content="No Elapsed Dates!" />
                   </div>
                 </div>
@@ -55,7 +54,7 @@ function App() {
             <Row>
               <Col>
                 <div>
-                  <p>Tolerance Window:</p>
+                  <Paragraph content="Tolerance Window:" />
                   <Switch />
                 </div>
               </Col>
@@ -66,23 +65,42 @@ function App() {
           {/* Second column */}
           <Col style={{ borderLeft: '10%' }}>
             <Row>
-              <div>
-                <Question question="Split schedule using social distancing?" />
-              </div>
-              <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div>
+              <Col>
+                <div>
+                  <Question question="Split schedule using social distancing?" />
+                </div>
+                <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px',}}></div>
+              </Col>
             </Row>
            
             <Row>
               <Col>
-                <div>
-                  <Paragraph content="Location Checking:" />
-                  <div  style={{color:'mediumseagreen'}}>
-                    <Paragraph content="All Available!" /></div>
+                <Paragraph content="Location Checking:" />
+                  <div style={{color:'mediumseagreen'}}>
+                    <Paragraph content="All Available!" />
                   </div>
                 <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div>
               </Col>
             </Row>
 
+            <Row>
+              <Col>
+                <div>
+                  <Paragraph content="Client:" />
+                  <Client client={''} />
+                </div>
+              </Col>
+            </Row>
+
+          </Col>
+        </Row>
+
+        {/* bottom button */}
+        <Row>
+          <Col>
+            <div style={{}}>
+              <Paragraph content="Data in the import file is correct. Please press Continue to import." />
+            </div>
           </Col>
         </Row>
       </div>
