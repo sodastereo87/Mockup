@@ -17,6 +17,7 @@ const FileUploader: React.FC = () => {
     e.preventDefault();
   };
 
+  // simulated progress bar
   const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files && e.target.files[0];
     if (file) {
@@ -24,6 +25,7 @@ const FileUploader: React.FC = () => {
     }
   };
 
+  // this function is responsible for setting up the file name and initiating the progress simulation
   const handleFileUpload = (file: File) => {
     setFileName(file.name);
 
@@ -42,26 +44,23 @@ const FileUploader: React.FC = () => {
       }
     }, 10); // Simulated time delay
 
-    // Here you can handle the file upload using API calls or other logic
-    // Replace the interval simulation with your actual upload progress logic
+    
   };
 
   return (
+    <div>
     <div
       className={dragndropCSS.dropfile}
       onDrop={handleDrop}
       onDragOver={handleDragOver}
     >
-      <p className={dragndropCSS.dropborder}>Drag & Drop File Here or Browse</p>
-      {fileName && <p>Uploaded File: {fileName}</p>}
-      {uploadProgress > 0 && (
-        <div className={dragndropCSS.progressBar}>
-          <div
-            className={dragndropCSS.progressFill}
-            style={{ width: `${uploadProgress}%`, background: 'blue', height: '20px' }}
-          />
-        </div>
-      )}
+      <p className={dragndropCSS.dropborder}>Drag & Drop File Here or  <strong>Browse</strong></p>
+      <button
+          onClick={() => document.getElementById('fileInput')?.click()}
+          className={dragndropCSS.dragsec}
+        >
+          Upload Manifeston
+      </button>
       <label htmlFor="fileInput">
         <input
           type="file"
@@ -69,14 +68,23 @@ const FileUploader: React.FC = () => {
           style={{ display: 'none' }}
           onChange={handleFileInputChange}
         />
-        <button
-          onClick={() => document.getElementById('fileInput')?.click()}
-          className={dragndropCSS.dragsec}
-        >
-          Upload Manifeston
-        </button>
+      
       </label>
     </div>
+    {/* progress bar */}
+    <div>
+        {fileName && <p className={dragndropCSS.progressBar}>Uploaded File: {fileName}</p>}
+      {/* uploadProgress state to simulate the progress of the file upload */}
+      {uploadProgress > 0 && (
+        <div>
+          <div
+            className={dragndropCSS.progressFill}
+            style={{ width: `${uploadProgress}%` }}
+          />
+        </div>
+      )}
+    </div>
+  </div>
   );
 };
 

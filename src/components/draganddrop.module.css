@@ -22,4 +22,18 @@
     border-Radius: 7px;
     border: 2px dashed #ccc;
     padding: 30px;
+    font-weight: 400;
+}
+
+/* progress bar */
+.progressFill {
+    background-color: #ccc;
+    height: 2px;
+}
+
+.progressBar {
+    font-weight: 400;
+    color: #ccc;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
