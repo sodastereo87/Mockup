@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
-import dragndropCSS from './draganddrop.module.css'
+import dragndropCSS from './draganddrop.module.css';
 
 const FileUploader: React.FC = () => {
-  // useState<string>('') is used to maintain the file name as state (fileName) in the component
   const [fileName, setFileName] = useState<string>('');
+  const [uploadProgress, setUploadProgress] = useState<number>(0);
 
-  // handleDrop and handleDragOver functions handle the drop and drag over events respectively
   const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     const file = e.dataTransfer.files[0];
     if (file) {
-      setFileName(file.name);
-     
+      handleFileUpload(file);
     }
   };
 
@@ -19,13 +17,33 @@ const FileUploader: React.FC = () => {
     e.preventDefault();
   };
 
-  // handleFileInputChange function is triggered when a file is selected manually using the file input element. It extracts the file information and updates the fileName state
   const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files && e.target.files[0];
     if (file) {
-      setFileName(file.name);
-     
+      handleFileUpload(file);
     }
+  };
+
+  const handleFileUpload = (file: File) => {
+    setFileName(file.name);
+
+    // Simulated upload progress
+    const totalSize = file.size;
+    const step = 50; // Simulated step
+    let uploaded = 0;
+
+    const uploadInterval = setInterval(() => {
+      uploaded += step;
+      const progress = (uploaded / totalSize) * 100;
+      setUploadProgress(progress);
+
+      if (progress >= 100) {
+        clearInterval(uploadInterval);
+      }
+    }, 10); // Simulated time delay
+
+    // Here you can handle the file upload using API calls or other logic
+    // Replace the interval simulation with your actual upload progress logic
   };
 
   return (
@@ -34,9 +52,16 @@ const FileUploader: React.FC = () => {
       onDrop={handleDrop}
       onDragOver={handleDragOver}
     >
-       {/* upload the file using Drag & Drop */}
       <p className={dragndropCSS.dropborder}>Drag & Drop File Here or Browse</p>
       {fileName && <p>Uploaded File: {fileName}</p>}
+      {uploadProgress > 0 && (
+        <div className={dragndropCSS.progressBar}>
+          <div
+            className={dragndropCSS.progressFill}
+            style={{ width: `${uploadProgress}%`, background: 'blue', height: '20px' }}
+          />
+        </div>
+      )}
       <label htmlFor="fileInput">
         <input
           type="file"
@@ -44,8 +69,10 @@ const FileUploader: React.FC = () => {
           style={{ display: 'none' }}
           onChange={handleFileInputChange}
         />
-        {/* upload the file manually using the button */}
-        <button onClick={() => document.getElementById('fileInput')?.click()} className={dragndropCSS.dragsec}>
+        <button
+          onClick={() => document.getElementById('fileInput')?.click()}
+          className={dragndropCSS.dragsec}
+        >
           Upload Manifeston
         </button>
       </label>
