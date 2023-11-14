@@ -7,6 +7,7 @@ import DropDown from './components/dropdown';
 import Question from './components/checkbox';
 import FileDrop from './components/draganddrop';
 import Switch from './components/switch';
+import Paragraph from './components/location';
 
 function App() {
   return (
@@ -42,8 +43,10 @@ function App() {
             <Row>
               <Col>
                 <div>
-                  <p>Elapse Data Checking:</p>
-                  <p>No Elapsed Dates!</p>
+                  <Paragraph content="Elapse Data Checking:" />
+                  <div  style={{color:'mediumseagreen'}}>
+                    <Paragraph content="No Elapsed Dates!" />
+                  </div>
                 </div>
                 <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div>
               </Col>
@@ -68,13 +71,14 @@ function App() {
               </div>
               <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div>
             </Row>
-
+           
             <Row>
               <Col>
                 <div>
-                  <p>Location Checking:</p>
-                  <p>All Available!</p>
-                </div>
+                  <Paragraph content="Location Checking:" />
+                  <div  style={{color:'mediumseagreen'}}>
+                    <Paragraph content="All Available!" /></div>
+                  </div>
                 <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div>
               </Col>
             </Row>
