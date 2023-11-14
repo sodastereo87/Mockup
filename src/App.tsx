@@ -10,6 +10,7 @@ import Switch from './components/switch';
 import Paragraph from './components/location';
 import Client from './components/client';
 import Buttons from './components/buttons';
+import ClientMenu from './components/clientmenu';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
                 <div>
                   <DropDown />
                 </div>
-                <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div>
+                <div style={{ borderBottom: '1px solid #bbb', marginBottom: '20px'}}></div>
               </Col>
             </Row>
 
@@ -36,7 +37,7 @@ function App() {
                 <div>
                   <FileDrop />
                 </div>
-                <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div>
+                {/* <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div> */}
               </Col>
             </Row>
 
@@ -90,13 +91,16 @@ function App() {
                   <Paragraph content="Client:" />
                   <Client client={''} />
                 </div>
+                <div>
+             
+                </div>
               </Col>
             </Row>
 
           </Col>
         </Row>
 
-        {/* bottom button */}
+        {/* "Continue to import" section */}
         <Row>
           <Col>
             <div>

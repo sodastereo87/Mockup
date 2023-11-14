@@ -26,13 +26,15 @@ const Buttons: React.FC<QuestionProps> = ({
       <p>{questionText}</p>
       <div>
         {/* The style changes the background color of the selected button  */}
-        <button className={buttonsCSS.button}
+        <button 
+          className={buttonsCSS.buttonsec}
           onClick={() => handleOptionClick(1)}
           style={{ backgroundColor: selectedOption === 1 ? 'darkblue' : 'white', color: selectedOption === 1 ? 'white' : 'orange', border: selectedOption === 1 ? '' : '' }}
         >
           {option1Text}
         </button>
         <button
+          className={buttonsCSS.buttonsec}
           onClick={() => handleOptionClick(2)}
           style={{ backgroundColor: selectedOption === 2 ? 'darkblue' : 'white', color: selectedOption === 2 ? 'white' : 'orange', border: selectedOption === 2 ? '' : ''  }}
         >
