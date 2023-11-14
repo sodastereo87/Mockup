@@ -9,6 +9,7 @@ import FileDrop from './components/draganddrop';
 import Switch from './components/switch';
 import Paragraph from './components/location';
 import Client from './components/client';
+import Buttons from './components/buttons';
 
 function App() {
   return (
@@ -98,8 +99,12 @@ function App() {
         {/* bottom button */}
         <Row>
           <Col>
-            <div style={{}}>
-              <Paragraph content="Data in the import file is correct. Please press Continue to import." />
+            <div>
+              <Buttons
+                questionText="Data in the import file is correct. Please press Continue to import."
+                option1Text="Continue Import"
+                option2Text="Cancel"
+              />
             </div>
           </Col>
         </Row>
