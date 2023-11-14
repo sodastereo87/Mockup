@@ -61,7 +61,7 @@ function App() {
           </Col>
 
           {/* Second column */}
-          <Col>
+          <Col style={{ borderLeft: '10%' }}>
             <Row>
               <div>
                 <Question question="Split schedule using social distancing?" />

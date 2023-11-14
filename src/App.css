@@ -1,10 +1,10 @@
 .App {
   text-align: center;
   color: darkblue;
+  /* font-weight: 500; */
 }
 
-/* title */
-
+/* header */
 .App-header {
   background-color: white;
   display: flex;
@@ -14,14 +14,23 @@
   font-size: calc(10px + 2vmin);
   color: darkblue;
   margin-top: 5%;
+  margin-bottom: 5%;
+  font-weight: bold;
 }
 
+/* title text */
 .title {
-  font-weight: bold;
-  text-decoration: underline;
+  border-bottom: 1px solid #bbb;
+  /* width: 20%; */
+
 }
 
 /* dropdown arrow */
 .dropdown-toggle::after {
   margin-left: 350px !important;
+}
+
+/* columns */
+.col {
+  margin: 10px;
 }
