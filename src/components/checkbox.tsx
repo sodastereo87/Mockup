@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import checkCSS from './checkbox.module.css'
+
 
 interface QuestionProps {
   question: string;
@@ -19,11 +21,11 @@ const Question: React.FC<QuestionProps> = ({ question }) => {
   };
 
   return (
-    <div>
+    <div className={checkCSS.question}>
       <p>{question}</p>
       <label>
-        <input
-          type="checkbox"
+        <input 
+          type="radio"
           checked={isCheckedYes}
           onChange={() => handleCheckboxChange('yes')}
         />
@@ -31,7 +33,7 @@ const Question: React.FC<QuestionProps> = ({ question }) => {
       </label>
       <label>
         <input
-          type="checkbox"
+          type="radio"
           checked={isCheckedNo}
           onChange={() => handleCheckboxChange('no')}
         />

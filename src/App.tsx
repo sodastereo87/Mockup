@@ -21,7 +21,7 @@ function App() {
         <Row>
           {/* First column */}
           <Col>
-            <Row >
+            <Row>
               <Col>
                 <div>
                   <DropDown />
@@ -35,6 +35,7 @@ function App() {
                 <div>
                  <FileDrop />
                 </div>
+                <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div>
               </Col>
             </Row>
 
@@ -44,6 +45,7 @@ function App() {
                   <p>Elapse Data Checking:</p>
                   <p>No Elapsed Dates!</p>
                 </div>
+                <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div>
               </Col>
             </Row>
 
@@ -64,6 +66,7 @@ function App() {
               <div>
                 <Question question="Split schedule using social distancing?" />
               </div>
+              <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div>
             </Row>
 
             <Row>
@@ -72,6 +75,7 @@ function App() {
                   <p>Location Checking:</p>
                   <p>All Available!</p>
                 </div>
+                <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div>
               </Col>
             </Row>
 
