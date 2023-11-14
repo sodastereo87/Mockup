@@ -6,7 +6,7 @@ function DropDown() {
   return (
     <Dropdown className={dropCSS.menu}>
       <Dropdown.Toggle variant="" id="dropdown-basic" >
-      Select Import Name
+      Select Import Name:
       </Dropdown.Toggle>
 
       <Dropdown.Menu className={dropCSS.menu2}>

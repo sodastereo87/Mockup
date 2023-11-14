@@ -21,11 +21,12 @@ function App() {
         <Row>
           {/* First column */}
           <Col>
-            <Row>
+            <Row >
               <Col>
                 <div>
                   <DropDown />
                 </div>
+                <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div>
               </Col>
             </Row>
 
