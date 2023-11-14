@@ -1,0 +1,25 @@
+/* button section */
+.dragsec {
+    width: 200px;
+    border-Radius: 7px;
+    padding: 5px;
+    border: 2px solid;
+    margin: 10px;
+    background-color: darkblue;
+    color: white;
+}
+
+/* drag and drop section */
+.dropfile {
+    border-Radius: 7px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+.dropborder {
+    border-Radius: 7px;
+    border: 2px dashed #ccc;
+    padding: 30px;
+}

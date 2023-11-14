@@ -11,6 +11,7 @@ import Paragraph from './components/location';
 import Client from './components/client';
 import Buttons from './components/buttons';
 import ClientMenu from './components/clientmenu';
+import FileUploader from './components/draganddrop';
 
 function App() {
   return (
@@ -28,16 +29,16 @@ function App() {
                 <div>
                   <DropDown />
                 </div>
-                <div style={{ borderBottom: '1px solid #bbb', marginBottom: '20px'}}></div>
+                <div style={{ borderBottom: '1px solid #bbb', marginBottom: '20px', width: '50%'}}></div>
               </Col>
             </Row>
 
             <Row>
               <Col>
                 <div>
-                  <FileDrop />
+                  <FileUploader />
                 </div>
-                {/* <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px'}}></div> */}
+                <div style={{ borderBottom: '1px solid #bbb', width: '50%', marginBottom: '20px', marginTop: '20px'}}></div>
               </Col>
             </Row>
 

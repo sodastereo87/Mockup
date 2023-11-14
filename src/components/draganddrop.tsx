@@ -1,63 +1,56 @@
-import { DragEvent, useState } from 'react';
+import React, { useState } from 'react';
+import dragndropCSS from './draganddrop.module.css'
 
-export function FileDrop() {
-  const [isOver, setIsOver] = useState(false);
-  const [files, setFiles] = useState<File[]>([]);
+const FileUploader: React.FC = () => {
+  // useState<string>('') is used to maintain the file name as state (fileName) in the component
+  const [fileName, setFileName] = useState<string>('');
 
-  // Define the event handlers
-  const handleDragOver = (event: DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    setIsOver(true);
+  // handleDrop and handleDragOver functions handle the drop and drag over events respectively
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    if (file) {
+      setFileName(file.name);
+     
+    }
   };
 
-  const handleDragLeave = (event: DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    setIsOver(false);
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
   };
 
-  const handleDrop = (event: DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    setIsOver(false);
-
-    // Fetch the files
-    const droppedFiles = Array.from(event.dataTransfer.files);
-    setFiles(droppedFiles);
-
-    // Use FileReader to read file content
-    droppedFiles.forEach((file) => {
-      const reader = new FileReader();
-
-      reader.onloadend = () => {
-        console.log(reader.result);
-      };
-
-      reader.onerror = () => {
-        console.error('There was an issue reading the file.');
-      };
-
-      reader.readAsDataURL(file);
-      return reader;
-    });
+  // handleFileInputChange function is triggered when a file is selected manually using the file input element. It extracts the file information and updates the fileName state
+  const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files && e.target.files[0];
+    if (file) {
+      setFileName(file.name);
+     
+    }
   };
 
   return (
     <div
-      onDragOver={handleDragOver}
-      onDragLeave={handleDragLeave}
+      className={dragndropCSS.dropfile}
       onDrop={handleDrop}
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '50px',
-        width: '300px',
-        border: '1px dotted',
-        backgroundColor: isOver ? 'lightgray' : 'white',
-      }}
+      onDragOver={handleDragOver}
     >
-      Drag and drop some files here
+       {/* upload the file using Drag & Drop */}
+      <p className={dragndropCSS.dropborder}>Drag & Drop File Here or Browse</p>
+      {fileName && <p>Uploaded File: {fileName}</p>}
+      <label htmlFor="fileInput">
+        <input
+          type="file"
+          id="fileInput"
+          style={{ display: 'none' }}
+          onChange={handleFileInputChange}
+        />
+        {/* upload the file manually using the button */}
+        <button onClick={() => document.getElementById('fileInput')?.click()} className={dragndropCSS.dragsec}>
+          Upload Manifeston
+        </button>
+      </label>
     </div>
   );
-}
+};
 
-export default FileDrop;
+export default FileUploader;
