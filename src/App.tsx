@@ -91,14 +91,18 @@ function App() {
                   <Client client={'Client:'} />
                 </div>
                 <div>
-                  <Row style={{ marginTop: '30px' }}>
-                    <Col style={{ }}>
-                      <p>Testing Center 1</p>
-                      <p>Testing Center 2</p>
-                      <p>Testing Center 3</p>
-                      <p>Testing Center 4</p>
+                  <Row style={{ marginTop: '30px', textAlign: 'left'}}>
+                    <Col sm={4}>
+                      <p style={{ padding: '8px'}}>
+                        Testing Center 1</p>
+                      <p style={{ padding: '8px'}}>
+                        Testing Center 2</p>
+                      <p style={{ padding: '8px'}}>
+                        Testing Center 3</p>
+                      <p style={{ padding: '8px'}}>
+                        Testing Center 4</p>
                     </Col>
-                    <Col style={{ }}>
+                    <Col sm={8} style={{ }}>
                       <ClientMenu />
                       <ClientMenu />
                       <ClientMenu />

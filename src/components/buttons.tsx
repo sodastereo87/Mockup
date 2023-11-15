@@ -22,7 +22,7 @@ const Buttons: React.FC<QuestionProps> = ({
   };
 
   return (
-    <div>
+    <div  style={{ marginTop: '20px'}}>
       <p>{questionText}</p>
       <div>
         {/* The style changes the background color of the selected button  */}
