@@ -26,9 +26,9 @@
 }
 
 /* dropdown arrow */
-.dropdown-toggle::after {
+/* .dropdown-toggle::after {
   margin-left: 350px !important;
-}
+} */
 
 /* columns */
 .col {

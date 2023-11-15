@@ -1,0 +1,9 @@
+.menuclient1 {
+    width: 59%;
+    background-color: white;
+    color: darkblue;
+    text-align: center;
+    border-style: ridge;
+    border-radius: 7px;
+    margin-bottom: 5%;
+}

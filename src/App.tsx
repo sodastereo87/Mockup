@@ -1,11 +1,10 @@
 import React from 'react';
+import './App.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './App.css';
 import DropDown from './components/dropdown';
 import Question from './components/checkbox';
-import FileDrop from './components/draganddrop';
 import Switch from './components/switch';
 import Paragraph from './components/location';
 import Client from './components/client';
@@ -89,19 +88,32 @@ function App() {
             <Row>
               <Col>
                 <div>
-                  <Paragraph content="Client:" />
-                  <Client client={''} />
+                  <Client client={'Client:'} />
                 </div>
                 <div>
-             
+                  <Row style={{ marginTop: '30px' }}>
+                    <Col style={{ }}>
+                      <p>Testing Center 1</p>
+                      <p>Testing Center 2</p>
+                      <p>Testing Center 3</p>
+                      <p>Testing Center 4</p>
+                    </Col>
+                    <Col style={{ }}>
+                      <ClientMenu />
+                      <ClientMenu />
+                      <ClientMenu />
+                      <ClientMenu />
+                    </Col>
+                  </Row>
+              
                 </div>
               </Col>
             </Row>
 
           </Col>
         </Row>
-
-        {/* "Continue to import" section */}
+    
+        {/* "Continue to import" bottom section */}
         <Row>
           <Col>
             <div>

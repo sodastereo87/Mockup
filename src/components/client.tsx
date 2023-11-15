@@ -22,7 +22,7 @@ const Client: React.FC<ClientProps> = ({ client }) => {
 
   return (
     <div className={clientCSS.client}>
-      <p>{client}</p>
+      <p style={{ marginRight: '100px'}}>{client}</p>
       <label>
         <input 
           type="radio"
