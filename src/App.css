@@ -20,15 +20,10 @@
 
 /* title text */
 .title {
-  border-bottom: 1px solid #bbb;
+  /* border-bottom: 1px solid #bbb; */
   /* width: 20%; */
 
 }
-
-/* dropdown arrow */
-/* .dropdown-toggle::after {
-  margin-left: 350px !important;
-} */
 
 /* columns */
 .col {
@@ -38,4 +33,17 @@
 /* toggle switch color */
 .form-switch .form-check-input:checked {
   background-color: darkblue;
+}
+
+/* X corner icon */
+.close-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  padding-bottom: 5px;
+  background-color: darkblue;
+  border-radius: 7px;
+  color: white;
+  width: 45px;
 }

@@ -7,6 +7,11 @@
           margin-bottom: 5%;
       }
 
+      .menu1 {
+          color: darkblue;
+          font-weight: 500;
+      }
+
       /* dropdowm menu options */
       .menu2 {
           width: 100%;

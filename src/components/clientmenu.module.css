@@ -7,3 +7,9 @@
     border-radius: 7px;
     margin-bottom: 5%;
 }
+
+.menuclient2 {
+    width: 50% !important;
+    color: red;
+    /* border-style: none */
+}

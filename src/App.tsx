@@ -17,7 +17,11 @@ function App() {
     <Container>
       <div className="App">
         <header className="App-header">
+        <div className="close-icon">
+          <span className="x-icon">×</span>
+        </div>
           <p className='title'>Document Upload</p>
+          <div style={{ borderBottom: '1px solid #bbb', width: '18%', marginBottom: '20px', marginTop: '0px'}}></div>
         </header>
 
         <Row>

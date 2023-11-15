@@ -5,7 +5,8 @@ import dropCSS from './dropdown.module.css'
 function DropDown() {
   return (
     <Dropdown className={dropCSS.menu}>
-      <Dropdown.Toggle variant="" id="dropdown-basic" style={{color:'darkblue', fontWeight:'500' }}>
+      <Dropdown.Toggle variant="" id="dropdown-basic" 
+      className={dropCSS.menu1}>
       Select Import Name:
       </Dropdown.Toggle>
 
