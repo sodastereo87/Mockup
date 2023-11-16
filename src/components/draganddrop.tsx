@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import dragndropCSS from './draganddrop.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileLines  } from '@fortawesome/free-regular-svg-icons';
 
 const FileUploader: React.FC = () => {
   const [fileName, setFileName] = useState<string>('');
@@ -49,12 +51,15 @@ const FileUploader: React.FC = () => {
 
   return (
     <div>
-    <div
+     <div
       className={dragndropCSS.dropfile}
       onDrop={handleDrop}
       onDragOver={handleDragOver}
     >
-      <p className={dragndropCSS.dropborder}>Drag & Drop File Here or  <strong>Browse</strong></p>
+      <div className={dragndropCSS.dropborder}>
+        <FontAwesomeIcon  size="2x" icon={faFileLines} style={{color:'orange'}} />
+        <p>Drag & Drop File Here or  <strong>Browse</strong></p>
+      </div>
       <button
           onClick={() => document.getElementById('fileInput')?.click()}
           className={dragndropCSS.dragsec}
@@ -68,7 +73,6 @@ const FileUploader: React.FC = () => {
           style={{ display: 'none' }}
           onChange={handleFileInputChange}
         />
-      
       </label>
     </div>
     {/* progress bar */}
