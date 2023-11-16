@@ -10,6 +10,8 @@ import Client from './components/client';
 import Buttons from './components/buttons';
 import ClientMenu from './components/clientmenu';
 import FileUploader from './components/draganddrop';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock } from '@fortawesome/free-regular-svg-icons';
 
 function App() {
   return (
@@ -105,7 +107,7 @@ function App() {
                       <p style={{ padding: '8px'}}>
                         Testing Center 4</p>
                     </Col>
-                    <Col sm={8} style={{ }}>
+                    <Col sm={8}>
                       <ClientMenu />
                       <ClientMenu />
                       <ClientMenu />
