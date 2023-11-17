@@ -15,6 +15,7 @@ function App() {
   return (
     <Container>
       <div className="App">
+        {/* "Document Upload" section */}
         <header className="App-header">
           <div className="close-icon">
             <span className="x-icon">×</span>
@@ -26,6 +27,7 @@ function App() {
         <Row>
           {/* First column */}
           <Col>
+            {/* "Select Import Name" section */}
             <Row>
               <Col>
                 <div>
@@ -35,6 +37,7 @@ function App() {
               </Col>
             </Row>
 
+            {/* "Drag & Drop" section */}
             <Row>
               <Col>
                 <div>
@@ -44,6 +47,7 @@ function App() {
               </Col>
             </Row>
 
+             {/* "Elapse Data" section */}
             <Row>
               <Col>
                 <div>
@@ -56,6 +60,7 @@ function App() {
               </Col>
             </Row>
 
+             {/* "Tolerance Window" section */}
             <Row>
               <Col>
                 <div>
@@ -68,6 +73,7 @@ function App() {
 
           {/* Second column */}
           <Col style={{ borderLeft: '10%' }}>
+            {/* "Split schedule" section */}
             <Row>
               <Col>
                 <div>
@@ -77,6 +83,7 @@ function App() {
               </Col>
             </Row>
            
+            {/* "Location Checking" section */}
             <Row>
               <Col>
                 <Paragraph content="Location Checking:" />
@@ -87,6 +94,7 @@ function App() {
               </Col>
             </Row>
 
+            {/* "Client:" section */}
             <Row>
               <Col>
                 <div>
@@ -117,7 +125,7 @@ function App() {
           </Col>
         </Row>
     
-        {/* "Continue to import" bottom section */}
+        {/* "Continue import" section */}
         <Row>
           <Col>
             <div>
