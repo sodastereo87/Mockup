@@ -5,11 +5,13 @@ import dropCSS from './dropdown.module.css'
 function DropDown() {
   return (
     <Dropdown className={dropCSS.menu}>
+      {/* triggers the dropdown menu and displays the text  */}
       <Dropdown.Toggle variant="" id="dropdown-basic" 
       className={dropCSS.menu1}>
       Select Import Name:
       </Dropdown.Toggle>
-
+      
+      {/* displays the options */}
       <Dropdown.Menu className={dropCSS.menu2}>
         <Dropdown.Item href="#/name-1">Name 1</Dropdown.Item>
         <Dropdown.Item href="#/name-2">Name 2</Dropdown.Item>

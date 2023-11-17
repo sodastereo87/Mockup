@@ -1,3 +1,4 @@
+/* Dropdown */
 .menuclient1 {
     width: 40%;
     background-color: white;
@@ -8,6 +9,7 @@
     margin-bottom: 5%;
 }
 
+/* Dropdown Menu */
 .menuclient2 {
     width: 50% !important;
     margin-left: -16px;
