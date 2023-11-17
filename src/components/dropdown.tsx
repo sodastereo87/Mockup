@@ -11,9 +11,9 @@ function DropDown() {
       </Dropdown.Toggle>
 
       <Dropdown.Menu className={dropCSS.menu2}>
-        <Dropdown.Item href="#/action-1">Name 1</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Name 2</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Name 3</Dropdown.Item>
+        <Dropdown.Item href="#/name-1">Name 1</Dropdown.Item>
+        <Dropdown.Item href="#/name-2">Name 2</Dropdown.Item>
+        <Dropdown.Item href="#/name-3">Name 3</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );

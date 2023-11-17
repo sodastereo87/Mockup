@@ -12,8 +12,8 @@ function ClientMenu() {
           Select Client:
         </Dropdown.Toggle>
         <Dropdown.Menu className={dropclientCSS.menuclient2}>
-          <Dropdown.Item href="#/action-1">Client 1</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Client 2</Dropdown.Item>
+          <Dropdown.Item href="#/client-1">Client 1</Dropdown.Item>
+          <Dropdown.Item href="#/client-2">Client 2</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
       <FontAwesomeIcon icon={faClock} className={`ml-2 ${dropclientCSS.clockIcon}`} style={{ marginBottom: '15px', 

@@ -10,17 +10,15 @@ import Client from './components/client';
 import Buttons from './components/buttons';
 import ClientMenu from './components/clientmenu';
 import FileUploader from './components/draganddrop';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock } from '@fortawesome/free-regular-svg-icons';
 
 function App() {
   return (
     <Container>
       <div className="App">
         <header className="App-header">
-        <div className="close-icon">
-          <span className="x-icon">×</span>
-        </div>
+          <div className="close-icon">
+            <span className="x-icon">×</span>
+          </div>
           <p className='title'>Document Upload</p>
           <div style={{ borderBottom: '1px solid #bbb', width: '18%', marginBottom: '20px', marginTop: '0px'}}></div>
         </header>
@@ -66,7 +64,6 @@ function App() {
                 </div>
               </Col>
             </Row>
-
           </Col>
 
           {/* Second column */}
@@ -114,11 +111,9 @@ function App() {
                       <ClientMenu />
                     </Col>
                   </Row>
-              
                 </div>
               </Col>
             </Row>
-
           </Col>
         </Row>
     
